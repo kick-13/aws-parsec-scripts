@@ -22,7 +22,7 @@ while($continue){
             Write-Host "Select Image to launch server from"
             $ami = $ami_list | Out-GridView -Title "Select Image to launch server from" -OutputMode Single
 
-            if ($instance -eq $null) {
+            if ($ami -eq $null) {
                 break
             } else {
                 $name = Read-Host "Enter name of the instance"
